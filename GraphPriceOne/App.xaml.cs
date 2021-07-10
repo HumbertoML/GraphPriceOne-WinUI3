@@ -20,7 +20,7 @@ namespace GraphPriceOne
         //Conexion SQL SERVER
         // Connection string for using Windows Authentication.
         private string connectionString =
-            @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+            @"Data Source=DESKTOP-R56EJQK\SQLEXPRESS;Initial Catalog=GraphPriceOne;Integrated Security=SSPI";
 
         // This is an example connection string for using SQL Server Authentication.
         // private string connectionString =
