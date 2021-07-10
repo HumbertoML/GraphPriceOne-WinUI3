@@ -1,19 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
-
 using GraphPriceOne.ViewModels;
-
 using Microsoft.UI.Xaml.Controls;
-
 using HtmlAgilityPack;
-
 using Windows.ApplicationModel.DataTransfer;
-
 using System.Web;
-
 using System.Net.Http;
-
 using System.Threading.Tasks;
-
 using System;
 using Microsoft.UI.Xaml;
 
