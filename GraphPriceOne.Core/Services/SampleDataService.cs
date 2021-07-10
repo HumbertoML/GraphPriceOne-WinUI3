@@ -30,22 +30,14 @@ namespace GraphPriceOne.Core.Services
             return companies.SelectMany(c => c.Orders);
         }
 
-        private static IEnumerable<SampleCompany> AllCompanies()
+        private static IEnumerable<Store> AllCompanies()
         {
-            return new List<SampleCompany>()
+            return new List<Store>()
             {
-                new SampleCompany()
+                new Store()
                 {
-                    CompanyID = "ALFKI",
-                    CompanyName = "Company A",
-                    ContactName = "Maria Anders",
-                    ContactTitle = "Sales Representative",
-                    Address = "Obere Str. 57",
-                    City = "Berlin",
-                    PostalCode = "12209",
-                    Country = "Germany",
-                    Phone = "030-0074321",
-                    Fax = "030-0076545",
+                    StoreID = "ALFKI",
+                    StoreName = "Company A",
                     Orders = new List<SampleOrder>()
                     {
                         new SampleOrder()
@@ -191,18 +183,10 @@ namespace GraphPriceOne.Core.Services
                         }
                     }
                 },
-                new SampleCompany()
+                new Store()
                 {
-                    CompanyID = "ANATR",
-                    CompanyName = "Company F",
-                    ContactName = "Ana Trujillo",
-                    ContactTitle = "Owner",
-                    Address = "Avda. de la Constitución 2222",
-                    City = "México D.F.",
-                    PostalCode = "05021",
-                    Country = "Mexico",
-                    Phone = "(5) 555-4729",
-                    Fax = "(5) 555-3745",
+                    StoreID = "ANATR",
+                    StoreName = "Company F",
                     Orders = new List<SampleOrder>()
                     {
                         new SampleOrder()
@@ -329,18 +313,10 @@ namespace GraphPriceOne.Core.Services
                         }
                     }
                 },
-                new SampleCompany()
+                new Store()
                 {
-                    CompanyID = "ANTON",
-                    CompanyName = "Company Z",
-                    ContactName = "Antonio Moreno",
-                    ContactTitle = "Owner",
-                    Address = "Mataderos  2312",
-                    City = "México D.F.",
-                    PostalCode = "05023",
-                    Country = "Mexico",
-                    Phone = "(5) 555-3932",
-                    Fax = string.Empty,
+                    StoreID = "ANTON",
+                    StoreName = "Company Z",
                     Orders = new List<SampleOrder>()
                     {
                         new SampleOrder()
