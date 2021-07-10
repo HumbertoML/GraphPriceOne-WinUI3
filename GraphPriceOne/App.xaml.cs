@@ -17,6 +17,17 @@ namespace GraphPriceOne
 {
     public partial class App : Application
     {
+        //Conexion SQL SERVER
+        // Connection string for using Windows Authentication.
+        private string connectionString =
+            @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+        // This is an example connection string for using SQL Server Authentication.
+        // private string connectionString =
+        //     @"Data Source=YourServerName\YourInstanceName;Initial Catalog=DatabaseName; User Id=XXXXX; Password=XXXXX";
+
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+
         public static Window MainWindow { get; set; } = new Window() { Title = "AppDisplayName".GetLocalized() };
 
         public App()
