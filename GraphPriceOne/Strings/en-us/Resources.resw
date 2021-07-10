@@ -202,4 +202,10 @@
     <value>https://YourPrivacyUrlGoesHere/</value>
     <comment>Here is your Privacy Statement url for SettingsPage</comment>
   </data>
+  <data name="Settings_Clipboard.Text" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="Settings_Clipboard_Descript.Text" xml:space="preserve">
+    <value>Add url automatically from clipboard to track</value>
+  </data>
 </root>

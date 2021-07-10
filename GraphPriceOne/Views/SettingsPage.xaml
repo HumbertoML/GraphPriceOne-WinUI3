@@ -63,6 +63,14 @@
                     Style="{ThemeResource BodyTextBlockStyle}" />
                 <HyperlinkButton x:Uid="SettingsPage_PrivacyTermsLink" Margin="{StaticResource XSmallTopMargin}" />
             </StackPanel>
+            
+            <!-- Switch para el pegado automatico de url del portapapeles -->
+            <TextBlock x:Uid="Settings_Clipboard" Style="{ThemeResource SubtitleTextBlockStyle}" ></TextBlock>
+            
+            <StackPanel Margin="{StaticResource XSmallTopMargin}">
+                <TextBlock Style="{ThemeResource BodyTextBlockStyle}" x:Uid="Settings_Clipboard_Descript"></TextBlock>
+                <ToggleSwitch AutomationProperties.Name="simple ToggleSwitch"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
