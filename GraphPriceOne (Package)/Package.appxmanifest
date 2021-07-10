@@ -8,13 +8,13 @@
   IgnorableNamespaces="uap rescap genTemplate">
 
   <Identity
-    Name="6A1B8A39-2F24-4B60-BD9A-B1177BFDF0F6"
-    Publisher="CN=humbe"
+    Name="28981bertomolina.GraphPriceOne"
+    Publisher="CN=07B7D03B-E0D7-4267-BD21-005497AB4FCB"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>GraphPriceOne (Package)</DisplayName>
-    <PublisherDisplayName>humbe</PublisherDisplayName>
+    <DisplayName>GraphPriceOne</DisplayName>
+    <PublisherDisplayName>HMLearning</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 
