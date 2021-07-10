@@ -53,6 +53,7 @@
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
+    <uap:Capability Name="enterpriseAuthentication"/>
   </Capabilities>
 
   <genTemplate:Metadata>
