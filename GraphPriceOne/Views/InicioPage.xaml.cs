@@ -43,7 +43,7 @@ namespace GraphPriceOne.Views
         {
             string url = await OutputClipboardText();
             //detecta que la url es valida y lanza el dialogo de confirmacion
-            if (Uri.IsWellFormedUriString(url, UriKind.Absolute) && url != AmazonURL.Text)
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute) && url != TxtUrl.Text)
             {
                 ShowDialog();
                 //FetchPrice.Focus(FocusState.Programmatic);
@@ -59,7 +59,7 @@ namespace GraphPriceOne.Views
             HttpClient httpClient = new HttpClient(handler);
             try
             {
-                HttpResponseMessage response = await httpClient.GetAsync(AmazonURL.Text);
+                HttpResponseMessage response = await httpClient.GetAsync(TxtUrl.Text);
                 HttpContent content = response.Content;
                 HtmlDocument document = new HtmlDocument();
                 document.LoadHtml(await content.ReadAsStringAsync());
@@ -83,7 +83,7 @@ namespace GraphPriceOne.Views
                 Price.Text = "";
                 Title.Text = "";
                 Price.FontSize = 204;
-                string URLTexto = AmazonURL.Text;
+                string URLTexto = TxtUrl.Text;
                 HttpResponseMessage response = await client.GetAsync(URLTexto);
                 HttpContent content = response.Content;
                 HtmlDocument document = new HtmlDocument();
@@ -143,7 +143,7 @@ namespace GraphPriceOne.Views
                 //AmazonURL.Text = result.ToString();
                 if (result.ToString() == "Primary")
                 {
-                    AmazonURL.Text = await OutputClipboardText();
+                    TxtUrl.Text = await OutputClipboardText();
                     ObtenerDatos();
 
                 }
