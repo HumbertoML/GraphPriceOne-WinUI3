@@ -18,18 +18,16 @@
             <StackPanel Orientation="Vertical">
                 <Grid Margin="10" Height="32">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="150"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Margin="10,0,0,0" VerticalAlignment="Center">URL:</TextBlock>
-                    <TextBox x:Name="AmazonURL" Margin="10,0,0,0" Grid.Column="1" GotFocus="AmazonURL_PointerEntered"/>
-                    <Button x:Name="FetchPrice" Content="📋" Width="120" Grid.Column="2" HorizontalAlignment="Center" Height="32" Click="FetchPrice_Click" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="TxtUrl" Text="{Binding TxtUrl,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" PlaceholderText="http://" Margin="10,0,0,0" Grid.Column="0"/>
+                    <Button x:Name="FetchPrice" Command="{Binding AddUrl}" Content="Follow" Width="120" Grid.Column="1" HorizontalAlignment="Center" Height="32" Click="Follow_URL" VerticalAlignment="Bottom"/>
                 </Grid>
 
                 <TextBlock x:Name="Title" FontSize="28" TextAlignment="Center" TextWrapping="WrapWholeWords"></TextBlock>
                 <TextBlock x:Name="Price" FontSize="204" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
-                <ProgressRing x:Name="Progress" Width="100" Height="100" IsActive="False" />
+                <ProgressRing x:Name="Progress" IsActive="False" />
             </StackPanel>
         </Grid>
     </Grid>
