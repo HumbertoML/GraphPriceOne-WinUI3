@@ -45,7 +45,6 @@ namespace GraphPriceOne.Views
             //detecta que la url es valida y lanza el dialogo de confirmacion
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute) && url != TxtUrl.Text)
             {
-                ShowDialog();
                 //FetchPrice.Focus(FocusState.Programmatic);
             }
         }
@@ -126,34 +125,6 @@ namespace GraphPriceOne.Views
         private void FetchPrice_Click(object sender, RoutedEventArgs e)
         {
             ObtenerDatos();
-        }
-        private async void ShowDialog()
-        {
-            ContentDialog dialog = new ContentDialog();
-            dialog.Title = "Desea agregar esta url?";
-            dialog.PrimaryButtonText = "Si";
-            dialog.SecondaryButtonText = "No, gracias";
-            dialog.CloseButtonText = "Cancel";
-            dialog.DefaultButton = ContentDialogButton.Primary;
-            dialog.Content = new ContentDialogContent();
-            try
-            {
-                var result = await dialog.ShowAsync();
-
-                //AmazonURL.Text = result.ToString();
-                if (result.ToString() == "Primary")
-                {
-                    TxtUrl.Text = await OutputClipboardText();
-                    ObtenerDatos();
-
-                }
-                //AmazonURL.Text = await OutputClipboardText();
-            }
-            catch (Exception ex)
-            {
-                Price.FontSize = 16;
-                Price.Text = ex.ToString() + "\n";
-            }
         }
         private void AmazonURL_PointerEntered(object sender, RoutedEventArgs e)
         {

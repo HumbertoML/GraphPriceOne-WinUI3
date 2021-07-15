@@ -14,9 +14,6 @@
   <PropertyGroup>
     <NoWarn>CA1416, $(NoWarn)</NoWarn>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Views\ContentDialogContent.xaml" />
-  </ItemGroup>
 
   <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
@@ -39,10 +36,5 @@
     <ProjectReference Include="..\Connection\Connection.csproj" />
     <ProjectReference Include="..\GraphPriceOne.Core\GraphPriceOne.Core.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Views\ContentDialogContent.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
 </Project>
